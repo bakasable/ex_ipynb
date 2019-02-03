@@ -1,3 +1,9 @@
 [submodule "extern/cliburn_bios-823-2018"]
 	path = extern/cliburn_bios-823-2018
 	url = https://github.com/cliburn/bios-823-2018.git
+[submodule "extern/ageron_handson-ml"]
+	path = extern/ageron_handson-ml
+	url = https://github.com/ageron/handson-ml.git
+[submodule "extern/dask-tutorial"]
+	path = extern/dask-tutorial
+	url = https://github.com/dask/dask-tutorial.git
