@@ -1,0 +1,3 @@
+[submodule "extern/cliburn_bios-823-2018"]
+	path = extern/cliburn_bios-823-2018
+	url = https://github.com/cliburn/bios-823-2018.git
