@@ -11,6 +11,8 @@ services:
       POSTGRES_PASSWORD: postgres
     volumes:
       - jupyter_postgres:/var/lib/postgresql/data
+      - $PWD/extern/data:/tmp/data
+
     networks:
       backend:
         aliases:
