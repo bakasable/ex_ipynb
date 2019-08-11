@@ -7,3 +7,6 @@
 [submodule "extern/dask-tutorial"]
 	path = extern/dask-tutorial
 	url = https://github.com/dask/dask-tutorial.git
+[submodule "extern/cliburn_sta-663-2019"]
+	path = extern/cliburn_sta-663-2019
+	url = https://github.com/cliburn/sta-663-2019.git

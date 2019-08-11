@@ -1,0 +1,63 @@
+version: "3.7"
+
+services:
+
+  postgres:
+    image: postgres
+    restart: always
+    # ports:
+    #   - 5432:5432    
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - jupyter_postgres:/var/lib/postgresql/data
+    networks:
+      backend:
+        aliases:
+          - db.postgres.app.com
+      
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - frontend
+      - backend
+
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: secret
+      MONGODB_USER: user
+      MONGODB_PASS: mypass
+
+    volumes:
+      - jupyter_mongo:/data/db
+    networks:
+      backend:
+        aliases:
+          - db.mongo.app.com
+  
+  redis:
+    image: redis
+    restart: always
+    networks:
+      frontend:
+        aliases:
+          - db.redis.app.com
+
+
+volumes:
+  jupyter_postgres:
+  jupyter_mongo:
+
+networks:
+  frontend:
+    name: jupyter
+  backend:
+    name: backend

@@ -1,0 +1,11 @@
+{
+ "argv": [
+  "/opt/conda/bin/python",
+  "-m",
+  "postgres_kernel",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "PostgreSQL",
+ "language": "sql"
+}

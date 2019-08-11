@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+
+  jupyter:
+    image: jupyter/all-spark-custom-notebook
+    restart: always
+    ports:
+      - 8888:8888
+    volumes:
+      - $PWD/extern:/home/jovyan/work
+    environment:
+      JUPYTER_ENABLE_LAB: 1
+    networks:
+      - frontend
+      - backend
+
+networks:
+  frontend:
+  backend:
