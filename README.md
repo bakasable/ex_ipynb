@@ -6,6 +6,7 @@ draft...
 ```
 docker build -t jupyter/all-spark-custom-notebook .
 docker-compose -f db.yml -f jupyter.yml up -d
+docker exec ex_ipynb_jupyter_1 jupyter notebook list
 ```
 
 
