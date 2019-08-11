@@ -1,14 +1,12 @@
 ipynb
 ==========
 
+draft...
 
-FIRST DRAFT!
-
-
-TOC
-=======
-
-`01 · Descriptive statistics <03%20·%20Working%20with%20data/01%20·%20Descriptive%20statistics.ipynb>`_ 
+```
+docker build -t jupyter/all-spark-custom-notebook .
+docker-compose -f db.yml -f jupyter.yml up -d
+```
 
 
 APIs
