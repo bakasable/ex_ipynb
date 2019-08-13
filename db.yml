@@ -37,7 +37,8 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: secret
       MONGODB_USER: user
       MONGODB_PASS: mypass
-
+    ports:
+      - 27017:27017
     volumes:
       - jupyter_mongo:/data/db
     networks:
