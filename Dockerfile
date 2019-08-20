@@ -24,9 +24,10 @@ RUN pip install motor \
         ibis-framework pygraphviz eralchemy \
         ipython-sql ipython-cypher intake \
         postgres_kernel jupyter-c-kernel \
-        networkx neo4j koalas pgspecial \
+        influxdb \
+	networkx neo4j koalas pgspecial \
         lxml umap-learn memory_profiler \
-        watermark && \
+        xarray netcdf4 watermark && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
 
